@@ -61,7 +61,6 @@ set wildignore=*.o,*.class,*.pyc
 
 set autoindent		" auto indentation
 set incsearch		" incremental search
-set nobackup		" no *~ backup files
 set copyindent		" copy the previous indentation on autoindenting
 set ignorecase		" ignore case when searching
 set smartcase		" ignore case if search pattern is all lowercase,case-sensitive otherwise
@@ -286,23 +285,6 @@ let g:tex_flavor='latex'
 "}
 
 
-" --- AutoClose - Inserts matching bracket, paren, brace or quote
-" fixed the arrow key problems caused by AutoClose
-if !has("gui_running")
-   set term=linux
-   imap OA <ESC>ki
-   imap OB <ESC>ji
-   imap OC <ESC>li
-   imap OD <ESC>hi
-
-   nmap OA k
-   nmap OB j
-   nmap OC l
-   nmap OD h
-endif
-
-
-
 " --- Command-T
 let g:CommandTMaxHeight = 15
 
@@ -349,7 +331,6 @@ set wrap linebreak nolist
 :command Q q
 :command W w
 set scrolloff=5
-"if has('mouse')
-"    set mouse=a
-"endif
-
+if has('mouse')
+    set mouse=a
+endif
