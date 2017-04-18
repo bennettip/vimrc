@@ -79,9 +79,9 @@
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
-[submodule "bundle/pyflakes-vim"]
-	path = bundle/pyflakes-vim
-	url = git://github.com/MiCHiLU/pyflakes-vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/vim-syntastic/syntastic.git
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
@@ -96,7 +96,7 @@
 	url = git://github.com/terryma/vim-multiple-cursors.git
 [submodule "bundle/vim-ipython"]
 	path = bundle/vim-ipython
-	url = git@github.com:ivanov/vim-ipython.git
+	url = git@github.com/ivanov/vim-ipython.git
 [submodule "bundle/typescript-vim"]
 	path = bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
