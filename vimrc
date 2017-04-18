@@ -323,14 +323,23 @@ let g:gitgutter_enabled = 1
 au BufNewFile,BufRead *.ejs set filetype=html
 
 """""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 set number
 set wrap linebreak nolist
-:command Wq wq
-:command WQ wq
-:command Q q
-:command W w
 set scrolloff=5
 if has('mouse')
     set mouse=a
 endif
+
+:command Wq wq
+:command WQ wq
+:command Q q
+:command W w
