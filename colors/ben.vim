@@ -1,12 +1,10 @@
 " Color setting {
-" Ben
-   hi Normal         ctermfg=LightGrey
-"
+   hi Normal         ctermfg=LightGray
    hi SignColumn     ctermfg=White           ctermbg=black
    hi FoldColumn     ctermfg=cyan            ctermbg=black
-   hi Folded         ctermfg=7 ctermbg=4
-   hi SpecialKey     ctermfg=4
-   hi NonText        ctermfg=4
+   hi Folded         ctermfg=7 ctermbg=LightBlue
+   hi SpecialKey     ctermfg=LightBlue
+   hi NonText        ctermfg=LightBlue
    hi Directory      ctermfg=6
    hi ErrorMsg       term=standout  ctermfg=7   ctermbg=1
    hi IncSearch      term=reverse   cterm=reverse
@@ -26,7 +24,7 @@
    hi Special        ctermfg=1
    hi Identifier     term=underline ctermfg=6
    hi Statement      ctermfg=3
-   hi PreProc        term=underline ctermfg=4
+   hi PreProc        term=underline ctermfg=LightBlue
    hi Type           term=underline ctermfg=2
    hi Ignore         ctermfg=0
    hi Error          term=reverse   ctermfg=7  ctermbg=1
@@ -38,6 +36,6 @@
     hi Cursor guibg=#cd4e00 guifg=bg gui=none ctermbg=3
     hi CursorColumn guibg=#dbdbdb gui=none ctermbg=yellow
     hi CursorLine guibg=#dbdbdb gui=none
-    "highlight Pmenu ctermfg=1 ctermbg=4 guibg=grey30
+    "highlight Pmenu ctermfg=1 ctermbg=LightBlue guibg=grey30
     hi PmenuSel     ctermfg=1 ctermbg=7 guibg=grey30
 "}
