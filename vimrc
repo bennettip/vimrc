@@ -326,6 +326,7 @@ au BufNewFile,BufRead *.ejs set filetype=html
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set colorcolumn=81
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -343,3 +344,4 @@ endif
 :command WQ wq
 :command Q q
 :command W w
+
