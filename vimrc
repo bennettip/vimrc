@@ -202,9 +202,6 @@ cmap cd. lcd %:p:h
 " PROGRAMMING SHORTCUTS
 "---------------------------------------------------------------------------
 
-" Ctrl-[ jump out of the tag stack (undo Ctrl-])
-map <C-[> <ESC>:po<CR>
-
 " ,g generates the header guard
 map <leader>g :call IncludeGuard()<CR>
 fun! IncludeGuard()
