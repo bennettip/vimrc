@@ -1,3 +1,5 @@
+vimrc
+============
 ONE-STEP INSTALL
 ----------------
 
