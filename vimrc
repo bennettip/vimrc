@@ -323,8 +323,6 @@ au BufNewFile,BufRead *.ejs set filetype=html
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-set colorcolumn=81
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -333,12 +331,14 @@ let g:syntastic_check_on_wq = 0
 set number
 set wrap linebreak nolist
 set scrolloff=5
+set colorcolumn=81
+
+command Wq wq
+command WQ wq
+command Q q
+command W w
+
 if has('mouse')
     set mouse=a
 endif
-
-:command Wq wq
-:command WQ wq
-:command Q q
-:command W w
 
