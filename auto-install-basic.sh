@@ -16,8 +16,7 @@ die() {
 
 cd ~
 git clone https://github.com/bennettip/vimrc.git
-mkdir ~/.vim
-mkdir ~/.vim/colors
+mkdir -p ~/.vim/colors
 ln -s ~/vimrc/basic.vim .vimrc
 ln -s ~/vimrc/colors/ben.vim ~/.vim/colors/ben.vim
 
