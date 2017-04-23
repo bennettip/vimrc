@@ -1,13 +1,3 @@
-" For pathogen.vim: auto load all plugins in .vim/bundle
-
-let g:pathogen_disabled = []
-if !has('gui_running')
-   call add(g:pathogen_disabled, 'powerline')
-endif
-
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 " General Settings
 
 set nocompatible	" not compatible with the old-fashion vi mode
