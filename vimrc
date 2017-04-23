@@ -17,11 +17,11 @@ set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
 
 
-filetype off          " necessary to make ftdetect work on Linux
+filetype off            " necessary to make ftdetect work on Linux
 syntax on
-filetype on           " Enable filetype detection
-filetype indent on    " Enable filetype-specific indenting
-filetype plugin on    " Enable filetype-specific plugins
+filetype on             " Enable filetype detection
+filetype indent on      " Enable filetype-specific indenting
+filetype plugin on      " Enable filetype-specific plugins
 
 
 " auto reload vimrc when editing it
@@ -52,12 +52,13 @@ set wildmenu            " wild char completion menu
 " ignore these files while expanding wild chars
 set wildignore=*.o,*.class,*.pyc
 
-set autoindent		" auto indentation
-set incsearch		" incremental search
-set copyindent		" copy the previous indentation on autoindenting
-set ignorecase		" ignore case when searching
-set smartcase		" ignore case if search pattern is all lowercase,case-sensitive otherwise
-set smarttab		" insert tabs on the start of a line according to context
+set autoindent	    " auto indentation
+set incsearch	    " incremental search
+set copyindent	    " copy the previous indentation on autoindenting
+set ignorecase	    " ignore case when searching
+" ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smartcase
+set smarttab        " insert tabs on the start of a line according to context
 
 " disable sound on errors
 set noerrorbells
@@ -97,11 +98,13 @@ endfunction
 
 
 " C/C++ specific settings
-autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
+autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,
+    \ n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
 
 "Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
-au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+au BufReadPost * if line("'\"") > 0|if line("'\"") <=
+    \ line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 "---------------------------------------------------------------------------
 " Tip #382: Search for <cword> and replace with input() in all open buffers
@@ -135,8 +138,8 @@ map <C-K> <C-W>k<C-W>_
 nmap <c-h> <c-w>h<c-w><bar>
 " move to and maximize the right split
 nmap <c-l> <c-w>l<c-w><bar>
-set wmw=0                     " set the min width of a window to 0 so we can maximize others
-set wmh=0                     " set the min height of a window to 0 so we can maximize others
+set wmw=0       " set the min width of a window to 0 so we can maximize others
+set wmh=0       " set the min height of a window to 0 so we can maximize others
 " }
 
 " move around tabs. conflict with the original screen top/bottom
@@ -277,7 +280,8 @@ let g:CommandTMaxHeight = 15
 " --- SuperTab
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>",
+    \ "&omnifunc:<c-x><c-o>"]
 
 
 " --- EasyMotion
@@ -300,7 +304,8 @@ let g:tagbar_autofocus = 1
 let g:snipMateAllowMatchingDot = 0
 
 " --- coffee-script
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw! " recompile coffee scripts on write
+" recompile coffee scripts on write
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
 " --- vim-gitgutter
 let g:gitgutter_enabled = 1
