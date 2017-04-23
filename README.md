@@ -129,10 +129,10 @@ PLUGINS
     `,]` move to the end of the current indentation-delimited block (very useful in Python and CoffeeScript)
     `,[` move to the beginning of the current indentation-delimited block (very useful in Python and CoffeeScript)
 
-* [Zen Coding](https://github.com/mattn/zencoding-vim): expanding abbreviation like zen-coding.
+* [Emmet.vim](https://github.com/vim-scripts/Emmet.vim): expanding abbreviation like emmet.
 
-  Useful commands:   
-    `<ctrl-y>,` expand zen-coding abbreviation.
+  Useful commands:
+    `<ctrl-y>,` expand emmet abbreviation.
 
 * [ack.vim](https://github.com/mileszs/ack.vim): run ack (a better grep) from vim, and shows the results in a split window.
 
