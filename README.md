@@ -10,7 +10,10 @@ Use curl (for Mac OS X):
 or wget (for most UNIX platforms):
 
      wget -O - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install.sh | sh
+     
+basic vimrc:
 
+     wget -O - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install-basic.sh | sh
 
 MANUALLY INSTALL
 ----------------
