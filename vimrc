@@ -313,7 +313,9 @@ let g:gitgutter_enabled = 1
 " set ejs filetype to html
 au BufNewFile,BufRead *.ejs set filetype=html
 
-"""""
+"---------------------------------------------------------------------------
+" CUSTOM SETTINGS
+"---------------------------------------------------------------------------
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*

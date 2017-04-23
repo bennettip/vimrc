@@ -244,7 +244,9 @@ fun! Big5()
 	set fileencoding=big5
 endfun
 
-"""""
+"---------------------------------------------------------------------------
+" CUSTOM SETTINGS
+"---------------------------------------------------------------------------
 set number
 set wrap linebreak nolist
 set scrolloff=5
