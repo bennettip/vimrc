@@ -328,6 +328,7 @@ set number
 set wrap linebreak nolist
 set scrolloff=5
 set colorcolumn=81
+set t_Co=256
 
 command Wq wq
 command WQ wq
