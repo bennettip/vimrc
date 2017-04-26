@@ -132,13 +132,6 @@ set wmw=0       " set the min width of a window to 0 so we can maximize others
 set wmh=0       " set the min height of a window to 0 so we can maximize others
 " }
 
-" move around tabs. conflict with the original screen top/bottom
-" comment them out if you want the original H/L
-" go to prev tab
-map <S-H> gT
-" go to next tab
-map <S-L> gt
-
 " new tab
 map <C-t><C-t> :tabnew<CR>
 " close tab
@@ -193,25 +186,6 @@ fun! IncludeGuard()
    call append(1, "#define " . guard)
    call append( line("$"), "#endif // for #ifndef " . guard)
 endfun
-
-
-
-" Enable omni completion. (Ctrl-X Ctrl-O)
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType java set omnifunc=javacomplete#Complete
-
-" use syntax complete if nothing else available
-if has("autocmd") && exists("+omnifunc")
-  autocmd Filetype *
-              \	if &omnifunc == "" |
-              \		setlocal omnifunc=syntaxcomplete#Complete |
-              \	endif
-endif
 
 set cot-=preview "disable doc preview in omnicomplete
 

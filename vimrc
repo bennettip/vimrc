@@ -142,13 +142,6 @@ set wmw=0       " set the min width of a window to 0 so we can maximize others
 set wmh=0       " set the min height of a window to 0 so we can maximize others
 " }
 
-" move around tabs. conflict with the original screen top/bottom
-" comment them out if you want the original H/L
-" go to prev tab
-map <S-H> gT
-" go to next tab
-map <S-L> gt
-
 " new tab
 map <C-t><C-t> :tabnew<CR>
 " close tab
