@@ -20,7 +20,5 @@ git submodule update --init
 
 ./install-vimrc.sh
 
-cd bundle/command-t/ruby/command-t
-(ruby extconf.rb && make) || warn "Can't compile Command-T."
-
 echo "vimrc is installed."
+
