@@ -2,7 +2,7 @@
 
 let g:pathogen_disabled = []
 if !has('gui_running')
-   call add(g:pathogen_disabled, 'powerline')
+    call add(g:pathogen_disabled, 'powerline')
 endif
 
 call pathogen#runtime_append_all_bundles()
@@ -32,18 +32,19 @@ syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
 if has("gui_running")	" GUI color and font settings
-  set guifont=Menlo:h14
-  set background=dark
-  set t_Co=256          " 256 color mode
-  set cursorline        " highlight current line
-  colors moria
-  highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
+    set guifont=Noto_Mono:h14
+    set guifontwide=Noto_Sans_CJK_TC:h14
+    set background=dark
+    set t_Co=256          " 256 color mode
+    set cursorline        " highlight current line
+    colors moria
+    highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
 else
 " terminal color settings
-  colors ben
+    colors ben
 endif
 
-set clipboard=unnamed	" yank to the system register (*) by default
+"set clipboard=unnamed	" yank to the system register (*) by default
 set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
 set wildchar=<TAB>	" start wild expansion in the command line using <TAB>
@@ -210,10 +211,10 @@ autocmd FileType java set omnifunc=javacomplete#Complete
 
 " use syntax complete if nothing else available
 if has("autocmd") && exists("+omnifunc")
-  autocmd Filetype *
-              \	if &omnifunc == "" |
-              \		setlocal omnifunc=syntaxcomplete#Complete |
-              \	endif
+    autocmd Filetype *
+    \ if &omnifunc == "" |
+    \   setlocal omnifunc=syntaxcomplete#Complete |
+    \ endif
 endif
 
 set cot-=preview "disable doc preview in omnicomplete
@@ -231,20 +232,20 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
 
 fun! ViewUTF8()
-	set encoding=utf-8
-	set termencoding=big5
+    set encoding=utf-8
+    set termencoding=big5
 endfun
 
 fun! UTF8()
-	set encoding=utf-8
-	set termencoding=big5
-	set fileencoding=utf-8
-	set fileencodings=ucs-bom,big5,utf-8,latin1
+    set encoding=utf-8
+    set termencoding=big5
+    set fileencoding=utf-8
+    set fileencodings=ucs-bom,big5,utf-8,latin1
 endfun
 
 fun! Big5()
-	set encoding=big5
-	set fileencoding=big5
+    set encoding=big5
+    set fileencoding=big5
 endfun
 
 
@@ -309,16 +310,15 @@ au BufNewFile,BufRead *.ejs set filetype=html
 "---------------------------------------------------------------------------
 " CUSTOM SETTINGS
 "---------------------------------------------------------------------------
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 set number
-set wrap linebreak nolist
 set scrolloff=5
 set colorcolumn=81
 set t_Co=256
