@@ -3,7 +3,7 @@ vimrc
 ONE-STEP INSTALL
 ----------------
 
-Use curl (for Mac OS X):
+Use curl (for macOS):
 
      curl -o - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install.sh | sh
 
@@ -92,8 +92,6 @@ PLUGINS
 
 * [Command-T](https://github.com/wincent/Command-T): open and navigate between files with `cmd-t`.
   
-* [SuperTab](http://www.vim.org/scripts/script.php?script_id=1643): Do all your insert-mode completion with Tab.
-
 * [snipMate](http://www.vim.org/scripts/script.php?script_id=2540): TextMate-style snippets for Vim
 
   `:help snipMate` to see more info.
