@@ -32,8 +32,8 @@ syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
 if has("gui_running")	" GUI color and font settings
-    set guifont=Noto_Mono:h14
-    set guifontwide=Noto_Sans_CJK_TC:h14
+    set guifont=Noto_Sans_Mono:h14
+    set guifontwide=Noto_Sans_CJK_HK:h14
     set background=dark
     set t_Co=256          " 256 color mode
     set cursorline        " highlight current line
@@ -253,7 +253,6 @@ endfun
 " PLUGIN SETTINGS
 "---------------------------------------------------------------------------
 
-
 " ------- vim-latex - many latex shortcuts and snippets {
 
 " IMPORTANT: win32 users will need to have 'shellslash' set so that latex
@@ -267,22 +266,13 @@ let g:tex_flavor='latex'
 
 "}
 
-
 " --- Command-T
 let g:CommandTMaxHeight = 15
-
-" --- SuperTab
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>",
-    \ "&omnifunc:<c-x><c-o>"]
-
 
 " --- EasyMotion
 "let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
-
 
 " --- TagBar
 " toggle TagBar with F7
