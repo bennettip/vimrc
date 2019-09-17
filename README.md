@@ -139,6 +139,8 @@ PLUGINS
 
 * [syntastic](https://github.com/vim-syntastic/syntastic): syntax checking hacks for vim.
 
+* [vim-jsx](https://github.com/mxw/vim-jsx): React JSX syntax highlighting and indenting for vim. 
+
 * [Node.vim](https://github.com/moll/vim-node): tools to make Vim superb for developing with Node.js.
 
 Language specific supports
