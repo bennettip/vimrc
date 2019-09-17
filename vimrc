@@ -11,7 +11,7 @@ call pathogen#helptags()
 " General Settings
 
 set nocompatible	" not compatible with the old-fashion vi mode
-set bs=2		" allow backspacing over everything in insert mode
+"set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
@@ -258,13 +258,12 @@ endfun
 " IMPORTANT: win32 users will need to have 'shellslash' set so that latex
 " can be called correctly.
 set shellslash
-set grepprg=grep\ -nH\ $*
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
-
-"}
+set grepprg=grep\ -nH\ $*
+let g:Tex_AutoFolding = 0
 
 " --- Command-T
 let g:CommandTMaxHeight = 15
