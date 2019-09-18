@@ -61,6 +61,9 @@
 [submodule "bundle/node"]
 	path = bundle/node
 	url = https://github.com/moll/vim-node.git
+[submodule "bundle/powerline"]
+	path = bundle/powerline
+	url = https://github.com/powerline/powerline.git
 [submodule "bundle/vim-latex"]
 	path = bundle/vim-latex
 	url = https://github.com/vim-latex/vim-latex.git
@@ -91,6 +94,6 @@
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
-[submodule "bundle/powerline"]
-	path = bundle/powerline
-	url = https://github.com/powerline/powerline.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
