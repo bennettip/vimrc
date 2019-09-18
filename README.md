@@ -28,12 +28,6 @@ MANUALLY INSTALL
 
         ./install-vimrc.sh
 
-3. (Optional, if you want Command-T) Compile the Command-T plugin
-
-        cd .vim/bundle/command-t/ruby/command-t
-        ruby extconf.rb
-        make
-
 MANUALLY INSTALL ON WINDOWS
 ---------------------------
 
@@ -53,10 +47,10 @@ MANUALLY INSTALL ON WINDOWS
 INSTALL & UPGRADE PLUGIN BUNDLES
 --------------------------------
 
-All plugins (except vim-latex) were checked out as git submodules, 
-which can be upgraded with `git pull`. For example, to upgrade Command-T 
+All plugins were checked out as git submodules, 
+which can be upgraded with `git pull`. For example, to upgrade NERDTree
 
-     cd ~/.vim/bundle/command-t
+     cd ~/.vim/bundle/nerdtree
      git pull
 
 To install a new plugin as a git submoudle, type the following commands.
@@ -72,46 +66,40 @@ see the "USEFUL SHORTCUTS" section in vimrc to learn my shortcuts.
 PLUGINS
 -------
 
-* [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332): Pathogen let us install a plugin as a bundle in ~/.vim/bundle seprately.
+* [Pathogen](https://www.vim.org/scripts/script.php?script_id=2332): Pathogen let us install a plugin as a bundle in ~/.vim/bundle seprately.
 
-* [Nerd Tree](http://www.vim.org/scripts/script.php?script_id=1658): A tree explorer plugin for navigating the filesystem.
+* [Nerd Tree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for navigating the filesystem.
 
   Useful commands:   
     `:Bookmark [name]` - bookmark any directory as name   
     `:NERDTree [name]` - open the bookmark [name] in Nerd Tree   
 
-* [AutoClose](http://www.vim.org/scripts/script.php?script_id=1849):  Inserts matching bracket, paren, brace or quote.
-
 * [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors): True Sublime Text style multiple selections for Vim.
 
-* [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt): deal with pairs of surroundings.
+* [vim-surround](https://github.com/tpope/vim-surround): deal with pairs of surroundings.
 
-* [matchit](http://www.vim.org/scripts/script.php?script_id=39): extended % matching for HTML, LaTeX, and many other languages. 
+* [matchit](https://www.vim.org/scripts/script.php?script_id=39): extended % matching for HTML, LaTeX, and many other languages. 
 
-* [xmledit](http://www.vim.org/scripts/script.php?script_id=301): XML/HTML tags will be completed automatically.
-
-* [Command-T](https://github.com/wincent/Command-T): open and navigate between files with `cmd-t`.
+* [xmledit](https://github.com/sukima/xmledit): XML/HTML tags will be completed automatically.
   
-* [snipMate](http://www.vim.org/scripts/script.php?script_id=2540): TextMate-style snippets for Vim
+* [snipMate](https://github.com/garbas/vim-snipmate): TextMate-style snippets for Vim
 
   `:help snipMate` to see more info.
 
-* [YankRing](http://www.vim.org/scripts/script.php?script_id=1234): Maintains a history of previous yanks, changes and deletes 
+* [YankRing](https://www.vim.org/scripts/script.php?script_id=1234): Maintains a history of previous yanks, changes and deletes 
   
   `:help yankring` to see more info.
 
-* [VisIncr](http://www.vim.org/scripts/script.php?script_id=670): Produce increasing/decreasing columns of numbers, dates, or daynames.
+* [VisIncr](https://www.vim.org/scripts/script.php?script_id=670): Produce increasing/decreasing columns of numbers, dates, or daynames.
   
-* [Cute Error Marker](http://www.vim.org/scripts/script.php?script_id=2653): showing error and warning icons on line.
+* [Cute Error Marker](https://www.vim.org/scripts/script.php?script_id=2653): showing error and warning icons on line.
   
    MacVim users need to enable "Use experimental renderer" to see
    graphical icons.
 
-* [vim-latex](http://vim-latex.sourceforge.net/): Latex support.
+* [vim-latex](https://github.com/vim-latex/vim-latex): Latex support.
 
-* [OmniCppComplete](http://www.vim.org/scripts/script.php?script_id=1520): C/C++ omni-completion with ctags database.
-
-* [JavaComplete](http://www.vim.org/scripts/script.php?script_id=1785): Java Omni-completion.
+* [JavaComplete](https://www.vim.org/scripts/script.php?script_id=1785): Java Omni-completion.
 
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion): An easy way to jump to a word.
 
@@ -119,7 +107,7 @@ PLUGINS
     `,,w` forward EasyMotion   
     `,,b` backward EasyMotion   
 
-* [TagBar](http://majutsushi.github.com/tagbar/): browsing the tags of source files ordered by classes.
+* [TagBar](https://majutsushi.github.com/tagbar): browsing the tags of source files ordered by classes.
 
   Useful commands:    
     `F7` toggles the TagBar
@@ -141,6 +129,10 @@ PLUGINS
 
 * [Git Gutter](https://github.com/airblade/vim-gitgutter): shows a git diff in the 'gutter' (sign column). It shows whether each line has been added, modified, and where lines have been removed.
 
+* [syntastic](https://github.com/vim-syntastic/syntastic): syntax checking hacks for vim.
+
+* [vim-jsx](https://github.com/mxw/vim-jsx): React JSX syntax highlighting and indenting for vim.
+
 * [Node.vim](https://github.com/moll/vim-node): tools to make Vim superb for developing with Node.js.
 
 Language specific supports
@@ -153,5 +145,5 @@ Language specific supports
 Other good references
 ---------------------
 
-* http://amix.dk/vim/vimrc.html
-* http://spf13.com/post/perfect-vimrc-vim-config-file
+* https://github.com/amix/vimrc
+* https://spf13.com/post/perfect-vimrc-vim-config-file
