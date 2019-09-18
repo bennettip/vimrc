@@ -28,12 +28,6 @@ MANUALLY INSTALL
 
         ./install-vimrc.sh
 
-3. (Optional, if you want Command-T) Compile the Command-T plugin
-
-        cd .vim/bundle/command-t/ruby/command-t
-        ruby extconf.rb
-        make
-
 MANUALLY INSTALL ON WINDOWS
 ---------------------------
 
@@ -87,8 +81,6 @@ PLUGINS
 * [matchit](http://www.vim.org/scripts/script.php?script_id=39): extended % matching for HTML, LaTeX, and many other languages. 
 
 * [xmledit](https://github.com/sukima/xmledit): XML/HTML tags will be completed automatically.
-
-* [Command-T](https://github.com/wincent/Command-T): open and navigate between files with `cmd-t`.
   
 * [snipMate](https://github.com/garbas/vim-snipmate): TextMate-style snippets for Vim
 
