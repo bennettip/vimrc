@@ -264,6 +264,7 @@ set shellslash
 let g:tex_flavor='latex'
 set grepprg=grep\ -nH\ $*
 let g:Tex_AutoFolding = 0
+let g:Tex_DefaultTargetFormat='pdf'
 
 " --- EasyMotion
 "let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
