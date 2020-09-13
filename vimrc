@@ -32,8 +32,8 @@ syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
 if has("gui_running")	" GUI color and font settings
-    set guifont=Noto_Sans_Mono:h14
-    set guifontwide=Noto_Sans_CJK_HK:h14
+    "set guifont=Noto_Sans_Mono:h14
+    "set guifontwide=Noto_Sans_CJK_HK:h14
     set background=dark
     set t_Co=256          " 256 color mode
     set cursorline        " highlight current line
@@ -264,6 +264,8 @@ set shellslash
 let g:tex_flavor='latex'
 set grepprg=grep\ -nH\ $*
 let g:Tex_AutoFolding = 0
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Imap_UsePlaceHolders = 0
 
 " --- EasyMotion
 "let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
@@ -317,4 +319,7 @@ command W w
 if has('mouse')
     set mouse=a
 endif
+
+com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+nnoremap = :FormatXML<Cr>
 
