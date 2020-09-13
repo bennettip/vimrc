@@ -86,10 +86,6 @@ PLUGINS
 
   `:help snipMate` to see more info.
 
-* [YankRing](https://www.vim.org/scripts/script.php?script_id=1234): Maintains a history of previous yanks, changes and deletes 
-  
-  `:help yankring` to see more info.
-
 * [VisIncr](https://www.vim.org/scripts/script.php?script_id=670): Produce increasing/decreasing columns of numbers, dates, or daynames.
   
 * [Cute Error Marker](https://www.vim.org/scripts/script.php?script_id=2653): showing error and warning icons on line.
