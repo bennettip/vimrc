@@ -129,6 +129,8 @@ PLUGINS
 
 * [Node.vim](https://github.com/moll/vim-node): tools to make Vim superb for developing with Node.js.
 
+* [fugitive.vim](https://github.com/tpope/vim-fugitive): a Git wrapper plugin for Vim.
+
 Language specific supports
 --------------------------
 
