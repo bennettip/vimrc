@@ -88,6 +88,6 @@
 [submodule "pack/xmledit/start/xmledit"]
 	path = pack/xmledit/start/xmledit
 	url = https://github.com/sukima/xmledit.git
-[submodule "vim-airline"]
-	path = vim-airline
+[submodule "pack/vim-airline/start/vim-airline"]
+	path = pack/vim-airline/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
