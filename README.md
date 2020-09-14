@@ -66,8 +66,6 @@ see the "USEFUL SHORTCUTS" section in vimrc to learn my shortcuts.
 PLUGINS
 -------
 
-* [Pathogen](https://www.vim.org/scripts/script.php?script_id=2332): Pathogen let us install a plugin as a bundle in ~/.vim/bundle seprately.
-
 * [Nerd Tree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for navigating the filesystem.
 
   Useful commands:   
