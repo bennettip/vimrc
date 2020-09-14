@@ -268,10 +268,6 @@ nnoremap <silent> <F7> :TagbarToggle<CR>
 " set focus to TagBar when opening it
 let g:tagbar_autofocus = 1
 
-" --- PowerLine
-" let g:Powerline_symbols = 'fancy' " require fontpatcher
-"
-
 " --- SnipMate
 let g:snipMateAllowMatchingDot = 0
 
@@ -288,9 +284,6 @@ au BufNewFile,BufRead *.ejs set filetype=html
 "---------------------------------------------------------------------------
 " CUSTOM SETTINGS
 "---------------------------------------------------------------------------
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
 "let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
@@ -298,17 +291,16 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 set number
 set scrolloff=5
-set colorcolumn=81
-set t_Co=256
+set colorcolumn=80
+
+if has('mouse')
+    set mouse=a
+endif
 
 command Wq wq
 command WQ wq
 command Q q
 command W w
-
-if has('mouse')
-    set mouse=a
-endif
 
 com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 nnoremap = :FormatXML<Cr>
