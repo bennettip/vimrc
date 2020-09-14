@@ -28,9 +28,6 @@
 [submodule "pack/node/start/node"]
 	path = pack/node/start/node
 	url = https://github.com/moll/vim-node.git
-[submodule "pack/powerline/start/powerline"]
-	path = pack/powerline/start/powerline
-	url = https://github.com/powerline/powerline.git
 [submodule "pack/pythoncomplete/start/pythoncomplete"]
 	path = pack/pythoncomplete/start/pythoncomplete
 	url = https://github.com/vim-scripts/pythoncomplete.git
@@ -91,3 +88,6 @@
 [submodule "pack/xmledit/start/xmledit"]
 	path = pack/xmledit/start/xmledit
 	url = https://github.com/sukima/xmledit.git
+[submodule "vim-airline"]
+	path = vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
