@@ -22,18 +22,17 @@ syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
 if has("gui_running")	" GUI color and font settings
-  set guifont=Osaka-Mono:h20
-  set background=dark
-  set t_Co=256          " 256 color mode
-  set cursorline        " highlight current line
-  colors moria
-  highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
+    set guifontwide=DejaVu\ Sans\ Mono
+    set background=dark
+    set t_Co=256          " 256 color mode
+    set cursorline        " highlight current line
+    colors moria
+    highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
 else
 " terminal color settings
-  colors ben
+    colors ben
 endif
 
-set clipboard=unnamed	" yank to the system register (*) by default
 set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
 set wildchar=<TAB>	" start wild expansion in the command line using <TAB>
@@ -88,8 +87,7 @@ endfunction
 
 
 " C/C++ specific settings
-autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,
-    \ n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
+autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
 
 "Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
@@ -187,6 +185,25 @@ fun! IncludeGuard()
    call append( line("$"), "#endif // for #ifndef " . guard)
 endfun
 
+
+
+" Enable omni completion. (Ctrl-X Ctrl-O)
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType java set omnifunc=javacomplete#Complete
+
+" use syntax complete if nothing else available
+if has("autocmd") && exists("+omnifunc")
+    autocmd Filetype *
+    \ if &omnifunc == "" |
+    \   setlocal omnifunc=syntaxcomplete#Complete |
+    \ endif
+endif
+
 set cot-=preview "disable doc preview in omnicomplete
 
 " make CSS omnicompletion work for SASS and SCSS
@@ -202,37 +219,35 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
 
 fun! ViewUTF8()
-	set encoding=utf-8
-	set termencoding=big5
+    set encoding=utf-8
+    set termencoding=big5
 endfun
 
 fun! UTF8()
-	set encoding=utf-8
-	set termencoding=big5
-	set fileencoding=utf-8
-	set fileencodings=ucs-bom,big5,utf-8,latin1
+    set encoding=utf-8
+    set termencoding=big5
+    set fileencoding=utf-8
+    set fileencodings=ucs-bom,big5,utf-8,latin1
 endfun
 
 fun! Big5()
-	set encoding=big5
-	set fileencoding=big5
+    set encoding=big5
+    set fileencoding=big5
 endfun
 
 "---------------------------------------------------------------------------
 " CUSTOM SETTINGS
 "---------------------------------------------------------------------------
 set number
-set wrap linebreak nolist
 set scrolloff=5
-set colorcolumn=81
-set t_Co=256
+set colorcolumn=80
+
+if has('mouse')
+    set mouse=a
+endif
 
 command Wq wq
 command WQ wq
 command Q q
 command W w
-
-if has('mouse')
-    set mouse=a
-endif
 

@@ -22,8 +22,7 @@ syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
 if has("gui_running")	" GUI color and font settings
-    "set guifont=Noto_Sans_Mono:h14
-    "set guifontwide=Noto_Sans_CJK_HK:h14
+    set guifontwide=DejaVu\ Sans\ Mono
     set background=dark
     set t_Co=256          " 256 color mode
     set cursorline        " highlight current line
@@ -34,7 +33,6 @@ else
     colors ben
 endif
 
-"set clipboard=unnamed	" yank to the system register (*) by default
 set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
 set wildchar=<TAB>	" start wild expansion in the command line using <TAB>
@@ -89,8 +87,7 @@ endfunction
 
 
 " C/C++ specific settings
-autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,://
-    \ cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
+autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
 
 "Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
