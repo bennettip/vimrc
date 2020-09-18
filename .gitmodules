@@ -79,9 +79,6 @@
 [submodule "pack/vim-snipmate/start/vim-snipmate"]
 	path = pack/vim-snipmate/start/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
-[submodule "pack/vim-snippets/start/vim-snippets"]
-	path = pack/vim-snippets/start/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
 [submodule "pack/VisIncr/start/VisIncr"]
 	path = pack/VisIncr/start/VisIncr
 	url = https://github.com/vim-scripts/VisIncr.git
@@ -94,3 +91,6 @@
 [submodule "pack/vim-fugitive/start/vim-fugitive"]
 	path = pack/vim-fugitive/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/vim-snippets/start/vim-snippets"]
+	path = pack/vim-snippets/start/vim-snippets
+	url = https://github.com/bennettip/vim-snippets.git
