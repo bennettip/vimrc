@@ -22,7 +22,7 @@ syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
 if has("gui_running")	" GUI color and font settings
-    set guifontwide=DejaVu\ Sans\ Mono\ 13
+    set guifont=DejaVu\ Sans\ Mono\ 12
     set background=dark
     set t_Co=256          " 256 color mode
     set cursorline        " highlight current line
