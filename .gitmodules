@@ -73,9 +73,6 @@
 [submodule "pack/vim-latex/start/vim-latex"]
 	path = pack/vim-latex/start/vim-latex
 	url = https://github.com/vim-latex/vim-latex.git
-[submodule "pack/vim-multiple-cursors/start/vim-multiple-cursors"]
-	path = pack/vim-multiple-cursors/start/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule "pack/vim-snipmate/start/vim-snipmate"]
 	path = pack/vim-snipmate/start/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
@@ -94,3 +91,6 @@
 [submodule "pack/vim-snippets/start/vim-snippets"]
 	path = pack/vim-snippets/start/vim-snippets
 	url = https://github.com/bennettip/vim-snippets.git
+[submodule "pack/vim-visual-multi/start/vim-visual-multi"]
+	path = pack/vim-visual-multi/start/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git
