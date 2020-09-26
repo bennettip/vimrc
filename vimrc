@@ -21,16 +21,29 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
-if has("gui_running")	" GUI color and font settings
+if has("gui_running")   " GUI color and font settings
     set guifont=DejaVu\ Sans\ Mono\ 12
     set background=dark
-    set t_Co=256          " 256 color mode
-    set cursorline        " highlight current line
+    set t_Co=256        " 256 color mode
+    set cursorline      " highlight current line
     colors moria
     highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
 else
-" terminal color settings
+    " terminal color settings
     colors ben
+
+    " change cursor shape in different modes
+    if has("autocmd")
+        au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
+        au InsertEnter,InsertChange *
+            \ if v:insertmode == 'i' | 
+            \   silent execute '!echo -ne "\e[5 q"' | redraw! |
+            \ elseif v:insertmode == 'r' |
+            \   silent execute '!echo -ne "\e[3 q"' | redraw! |
+            \ endif
+        au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+    endif
+    set ttimeoutlen=1   " reduce waite time after Esc
 endif
 
 set showmatch		" Cursor shows matching ) and }
@@ -56,11 +69,13 @@ set t_vb=
 set tm=500
 
 " TAB setting{
-   set expandtab        "replace <TAB> with spaces
-   set softtabstop=4
-   set shiftwidth=4
+    set expandtab        "replace <TAB> with spaces
+    set softtabstop=4
+    set shiftwidth=4
 
-   au FileType Makefile set noexpandtab
+    au FileType Makefile set noexpandtab
+
+    autocmd FileType html,css,javascript setlocal softtabstop=2 shiftwidth=2
 "}
 
 " status line {
@@ -299,7 +314,7 @@ command WQ wq
 command Q q
 command W w
 
-autocmd FileType html,htm,css setlocal softtabstop=2 shiftwidth=2
+autocmd FileType html,css,javascript setlocal softtabstop=2 shiftwidth=2
 
 com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 nnoremap = :FormatXML<Cr>
