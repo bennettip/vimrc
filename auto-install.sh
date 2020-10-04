@@ -11,11 +11,11 @@ die() {
 }
 
 [ -e "$VIMHOME/vimrc" ] && die "$VIMHOME/vimrc already exists."
-[ -e "~/.vim" ] && die "~/.vim already exists."
-[ -e "~/.vimrc" ] && die "~/.vimrc already exists."
+[ -e "$HOME/.vim" ] && die "$HOME/.vim already exists."
+[ -e "$HOME/.vimrc" ] && die "$HOME/.vimrc already exists."
 
 git clone https://github.com/bennettip/vimrc.git "$VIMHOME"
-cd "$VIMHOME"
+cd "$VIMHOME" || exit
 git submodule update --init
 
 ./install-vimrc.sh

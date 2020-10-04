@@ -11,10 +11,10 @@ die() {
 }
 
 [ -e "$VIMHOME/vimrc" ] && die "$VIMHOME/vimrc already exists."
-[ -e "~/.vim" ] && die "~/.vim already exists."
-[ -e "~/.vimrc" ] && die "~/.vimrc already exists."
+[ -e "$HOME/.vim" ] && die "$HOME/.vim already exists."
+[ -e "$HOME/.vimrc" ] && die "$HOME/.vimrc already exists."
 
-cd ~
+cd ~ || exit
 git clone https://github.com/bennettip/vimrc.git
 mkdir -p ~/.vim/colors
 ln -s ~/vimrc/basic.vim .vimrc
