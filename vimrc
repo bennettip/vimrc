@@ -314,8 +314,8 @@ command WQ wq
 command Q q
 command W w
 
-autocmd FileType html,css,javascript setlocal softtabstop=2 shiftwidth=2
-
 com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 nnoremap = :FormatXML<Cr>
+
+set lines=48 columns=86
 
