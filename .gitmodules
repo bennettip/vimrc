@@ -64,9 +64,6 @@
 [submodule "pack/vim-js-indent/start/vim-js-indent"]
 	path = pack/vim-js-indent/start/vim-js-indent
 	url = https://github.com/jason0x43/vim-js-indent.git
-[submodule "pack/vim-jsx/start/vim-jsx"]
-	path = pack/vim-jsx/start/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
 [submodule "pack/vim-latex/start/vim-latex"]
 	path = pack/vim-latex/start/vim-latex
 	url = https://github.com/vim-latex/vim-latex.git
@@ -94,3 +91,6 @@
 [submodule "pack/jupyter-vim/start/jupyter-vim"]
 	path = pack/jupyter-vim/start/jupyter-vim
 	url = https://github.com/jupyter-vim/jupyter-vim.git
+[submodule "pack/vim-jsx-pretty/start/vim-jsx-pretty"]
+	path = pack/vim-jsx-pretty/start/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
