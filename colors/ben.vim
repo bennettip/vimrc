@@ -1,41 +1,41 @@
 " Color setting {
-    hi Normal       ctermfg=LightGray   ctermbg=black
-    hi SignColumn   ctermfg=White       ctermbg=black
-    hi FoldColumn   ctermfg=cyan        ctermbg=black
-    hi Folded       ctermfg=7           ctermbg=LightBlue
+    hi Normal       ctermfg=LightGray   ctermbg=Black
+    hi SignColumn   ctermfg=White       ctermbg=Black
+    hi FoldColumn   ctermfg=Cyan        ctermbg=Black
+    hi Folded       ctermfg=7           ctermbg=DarkBlue
     hi SpecialKey   ctermfg=LightBlue
     hi NonText      ctermfg=LightBlue
-    hi Directory    ctermfg=6
-    hi ErrorMsg     term=standout       ctermfg=7   ctermbg=1
+    hi Directory    ctermfg=DarkCyan
+    hi ErrorMsg     term=standout       ctermfg=7       ctermbg=DarkRed
     hi IncSearch    term=reverse        cterm=reverse
-    hi Search       term=reverse        ctermfg=0   ctermbg=3
-    hi MoreMsg      ctermfg=2
+    hi Search       term=reverse        ctermfg=Black   ctermbg=3
+    hi MoreMsg      ctermfg=DarkGreen
     hi LineNr       term=underline      ctermfg=3
-    hi Question     term=standout       ctermfg=2
+    hi Question     term=standout       ctermfg=DarkGreen
     hi StatusLine   term=reverse        cterm=reverse
     hi StatusLineNC term=reverse        cterm=reverse
-    hi Title        ctermfg=5
+    hi Title        ctermfg=DarkMagenta
     hi Visual       term=reverse        cterm=reverse
     hi VisualNOS    term=underline      cterm=underline
-    hi WarningMsg   term=standout       ctermfg=1
-    hi WildMenu     term=standout       ctermfg=0   ctermbg=3
-    hi Comment      ctermfg=6
-    hi Constant     term=underline      ctermfg=5
-    hi Special      ctermfg=1
-    hi Identifier   term=underline      ctermfg=6
+    hi WarningMsg   term=standout       ctermfg=DarkRed
+    hi WildMenu     term=standout       ctermfg=Black   ctermbg=3
+    hi Comment      ctermfg=DarkCyan
+    hi Constant     term=underline      ctermfg=DarkMagenta
+    hi Special      ctermfg=DarkRed
+    hi Identifier   term=underline      ctermfg=DarkCyan
     hi Statement    ctermfg=3
     hi PreProc      term=underline      ctermfg=LightBlue
-    hi Type         term=underline      ctermfg=2
-    hi Ignore       ctermfg=0
-    hi Error        term=reverse        ctermfg=7   ctermbg=1
-    hi Todo         term=standout       ctermfg=0   ctermbg=3
+    hi Type         term=underline      ctermfg=DarkGreen
+    hi Ignore       ctermfg=Black
+    hi Error        term=reverse        ctermfg=7       ctermbg=DarkRed
+    hi Todo         term=standout       ctermfg=Black   ctermbg=3
 
     hi TabLine      guibg=#566676       guifg=fg    gui=underline   ctermbg=7
     hi TabLineFill  guibg=#c0d0e0       guifg=bg    gui=none
-    hi TabLineSel   guibg=bg            guifg=fg    ctermbg=1
+    hi TabLineSel   guibg=bg            guifg=fg    ctermbg=DarkRed
     hi Cursor       guibg=#cd4e00       guifg=bg    gui=none        ctermbg=3
-    hi CursorColumn guibg=#dbdbdb       gui=none    ctermbg=yellow
+    hi CursorColumn guibg=#dbdbdb       gui=none    ctermbg=Yellow
     hi CursorLine   guibg=#dbdbdb       gui=none
-    "highlight Pmenu ctermfg=1 ctermbg=LightBlue guibg=grey30
-    hi PmenuSel     ctermfg=1           ctermbg=7   guibg=grey30
+    "highlight Pmenu ctermfg=DarkRed     ctermbg=LightBlue   guibg=grey30
+    hi PmenuSel     ctermfg=DarkRed     ctermbg=7   guibg=grey30
 "}
