@@ -56,7 +56,7 @@ which can be upgraded with `git pull`. For example, to upgrade NERDTree
 To install a new plugin as a git submoudle, type the following commands.
 
      cd ~/.vim
-     git submodule add [GIT-REPOSITORY-URL] bundle/[PLUGIN-NAME]
+     git submodule add [GIT-REPOSITORY-URL] pack/[PLUGIN-NAME]/start/[PLUGIN-NAME]
 
 HOW TO USE
 ----------
@@ -66,13 +66,13 @@ see the "USEFUL SHORTCUTS" section in vimrc to learn my shortcuts.
 PLUGINS
 -------
 
-* [Nerd Tree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for navigating the filesystem.
+* [Nerd Tree](https://github.com/scrooloose/nerdtree): tree explorer plugin for navigating the filesystem.
 
   Useful commands:
     `:Bookmark [name]` - bookmark any directory as name
     `:NERDTree [name]` - open the bookmark [name] in Nerd Tree
 
-* [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors): True Sublime Text style multiple selections for Vim.
+* [vim-visual-multi](https://github.com/mg979/vim-visual-multi): multiple cursors plutin for Vim.
 
 * [vim-surround](https://github.com/tpope/vim-surround): deal with pairs of surroundings.
 
@@ -84,35 +84,35 @@ PLUGINS
 
   `:help snipMate` to see more info.
 
-* [VisIncr](https://www.vim.org/scripts/script.php?script_id=670): Produce increasing/decreasing columns of numbers, dates, or daynames.
+* [VisIncr](https://www.vim.org/scripts/script.php?script_id=670): produce increasing/decreasing columns of numbers, dates, or daynames.
 
 * [Cute Error Marker](https://www.vim.org/scripts/script.php?script_id=2653): showing error and warning icons on line.
 
    MacVim users need to enable "Use experimental renderer" to see
    graphical icons.
 
-* [vim-latex](https://github.com/vim-latex/vim-latex): Latex support.
+* [vim-latex](https://github.com/vim-latex/vim-latex): LaTeX support.
 
 * [JavaComplete](https://www.vim.org/scripts/script.php?script_id=1785): Java Omni-completion.
 
-* [EasyMotion](https://github.com/Lokaltog/vim-easymotion): An easy way to jump to a word.
+* [EasyMotion](https://github.com/Lokaltog/vim-easymotion): an easy way to jump to a word.
 
   Useful commands:
-    `,,w` forward EasyMotion
-    `,,b` backward EasyMotion
+    `<Leader><Leader>w` forward EasyMotion
+    `<Leader><Leader>b` backward EasyMotion
 
 * [TagBar](https://majutsushi.github.com/tagbar): browsing the tags of source files ordered by classes.
 
   Useful commands:
     `F7` toggles the TagBar
 
-* [Indent Motion](https://github.com/vim-scripts/indent-motion): Vim motions to the start and end of the current indentation-delimited block
+* [indent-motion](https://github.com/tmhedberg/indent-motion): Vim motions to the start and end of the current indentation-delimited block
 
   Useful commands:
-    `,]` move to the end of the current indentation-delimited block (very useful in Python and CoffeeScript)
-    `,[` move to the beginning of the current indentation-delimited block (very useful in Python and CoffeeScript)
+    `<Leader>]` move to the end of the current indentation-delimited block (very useful in Python and CoffeeScript)
+    `<Leader>[` move to the beginning of the current indentation-delimited block (very useful in Python and CoffeeScript)
 
-* [Emmet.vim](https://github.com/vim-scripts/Emmet.vim): expanding abbreviation like emmet.
+* [Emmet-vim](https://github.com/mattn/emmet-vim): expanding abbreviations like emmet.
 
   Useful commands:
     `<ctrl-y>,` expand emmet abbreviation.
@@ -125,7 +125,7 @@ PLUGINS
 
 * [syntastic](https://github.com/vim-syntastic/syntastic): syntax checking hacks for vim.
 
-* [vim-jsx](https://github.com/mxw/vim-jsx): React JSX syntax highlighting and indenting for vim.
+* [vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty): React syntax highlighting and indenting plugin for vim.
 
 * [Node.vim](https://github.com/moll/vim-node): tools to make Vim superb for developing with Node.js.
 
