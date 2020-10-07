@@ -117,13 +117,13 @@ PLUGINS
   Useful commands:
     `<ctrl-y>,` expand emmet abbreviation.
 
-* [ack.vim](https://github.com/mileszs/ack.vim): run ack (a better grep) from vim, and shows the results in a split window.
+* [ack.vim](https://github.com/mileszs/ack.vim): run ag/ack (a better grep) from vim, and shows the results in a split window.
 
   `:Ack [options] {pattern} [{directory}]`
 
-* [Git Gutter](https://github.com/airblade/vim-gitgutter): shows a git diff in the 'gutter' (sign column). It shows whether each line has been added, modified, and where lines have been removed.
+* [Git Gutter](https://github.com/airblade/vim-gitgutter): show a git diff in the sign column. It shows whether lines have been added, modified, or removed.
 
-* [syntastic](https://github.com/vim-syntastic/syntastic): syntax checking hacks for vim.
+* [Asynchronous Lint Engine](https://github.com/dense-analysis/ale): check syntax in Vim asynchronously and fix files.
 
 * [vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty): React syntax highlighting and indenting plugin for vim.
 
@@ -131,10 +131,12 @@ PLUGINS
 
 * [fugitive.vim](https://github.com/tpope/vim-fugitive): a Git wrapper plugin for Vim.
 
+* [fzf.vim](https://github.com/junegunn/fzf.vim): a fzf wrapper plugin for Vim.
+
 Language specific supports
 --------------------------
 
-* Latex: Read `:help latex-suite.txt`
+* LaTeX: Read `:help latex-suite.txt`
 * Restructured Text: `ctrl-u 1~5` inserts Part/Chapter/Section headers
 * HTML/XML: End tags are automatically completed after typing a begin tag. (Typing > twice pushes the end tag to a new line.)
 
