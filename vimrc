@@ -1,4 +1,6 @@
-" General Settings
+"---------------------------------------------------------------------------
+" GENERAL SETTINGS
+"---------------------------------------------------------------------------
 
 set nocompatible	" not compatible with the old-fashion vi mode
 set bs=2		" allow backspacing over everything in insert mode
@@ -30,13 +32,13 @@ if has("gui_running")   " GUI color and font settings
     highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
 else
     " terminal color settings
-    colors ben
+    colors bip
 
     " change cursor shape in different modes
     if has("autocmd")
         au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
         au InsertEnter,InsertChange *
-            \ if v:insertmode == 'i' | 
+            \ if v:insertmode == 'i' |
             \   silent execute '!echo -ne "\e[5 q"' | redraw! |
             \ elseif v:insertmode == 'r' |
             \   silent execute '!echo -ne "\e[3 q"' | redraw! |
@@ -109,9 +111,7 @@ set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <=
     \ line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-"---------------------------------------------------------------------------
 " Tip #382: Search for <cword> and replace with input() in all open buffers
-"---------------------------------------------------------------------------
 fun! Replace()
     let s:word = input("Replace " . expand('<cword>') . " with:")
     :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/ge'
@@ -256,7 +256,6 @@ endfun
 "---------------------------------------------------------------------------
 
 " ------- vim-latex - many latex shortcuts and snippets {
-
 " IMPORTANT: win32 users will need to have 'shellslash' set so that latex
 " can be called correctly.
 set shellslash
@@ -264,6 +263,8 @@ set shellslash
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+"}
+
 set grepprg=grep\ -nH\ $*
 let g:Tex_AutoFolding = 0
 let g:Tex_DefaultTargetFormat='pdf'
@@ -293,29 +294,35 @@ let g:gitgutter_enabled = 1
 " set ejs filetype to html
 au BufNewFile,BufRead *.ejs set filetype=html
 
+" --- syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 "---------------------------------------------------------------------------
 " CUSTOM SETTINGS
 "---------------------------------------------------------------------------
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+set number              " show line numbers
+set scrolloff=5         " number of lines above and below the cursor
+set colorcolumn=80      " highlight column 80
+set lines=48 columns=86 " set initial window size
 
-set number
-set scrolloff=5
-set colorcolumn=80
-
-if has('mouse')
-    set mouse=a
-endif
-
+" aliases for common typos
 command Wq wq
 command WQ wq
 command Q q
 command W w
 
+" enable mouse
+"if has('mouse')
+    "set mouse=a
+"endif
+
 com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 nnoremap = :FormatXML<Cr>
-
-set lines=48 columns=86
 
