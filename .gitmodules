@@ -91,9 +91,9 @@
 [submodule "pack/indent-motion/start/indent-motion"]
 	path = pack/indent-motion/start/indent-motion
 	url = https://github.com/tmhedberg/indent-motion
-[submodule "pack/fzf.vim/start/fzf.vim"]
-	path = pack/fzf.vim/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
 [submodule "pack/ale/start/ale"]
 	path = pack/ale/start/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule "pack/fzf_vim/start/fzf_vim"]
+	path = pack/fzf_vim/start/fzf_vim
+	url = https://github.com/junegunn/fzf.vim.git
