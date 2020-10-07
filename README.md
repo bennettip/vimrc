@@ -10,7 +10,7 @@ Use curl (for macOS):
 or wget (for most UNIX platforms):
 
      wget -O - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install.sh | sh
-     
+
 basic vimrc:
 
      wget -O - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install-basic.sh | sh
@@ -43,11 +43,11 @@ MANUALLY INSTALL ON WINDOWS
         source $VIM/vimfiles/vimrc
 
 
-  
+
 INSTALL & UPGRADE PLUGIN BUNDLES
 --------------------------------
 
-All plugins were checked out as git submodules, 
+All plugins were checked out as git submodules,
 which can be upgraded with `git pull`. For example, to upgrade NERDTree
 
      cd ~/.vim/bundle/nerdtree
@@ -68,26 +68,26 @@ PLUGINS
 
 * [Nerd Tree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for navigating the filesystem.
 
-  Useful commands:   
-    `:Bookmark [name]` - bookmark any directory as name   
-    `:NERDTree [name]` - open the bookmark [name] in Nerd Tree   
+  Useful commands:
+    `:Bookmark [name]` - bookmark any directory as name
+    `:NERDTree [name]` - open the bookmark [name] in Nerd Tree
 
 * [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors): True Sublime Text style multiple selections for Vim.
 
 * [vim-surround](https://github.com/tpope/vim-surround): deal with pairs of surroundings.
 
-* [matchit](https://www.vim.org/scripts/script.php?script_id=39): extended % matching for HTML, LaTeX, and many other languages. 
+* [matchit](https://www.vim.org/scripts/script.php?script_id=39): extended % matching for HTML, LaTeX, and many other languages.
 
 * [xmledit](https://github.com/sukima/xmledit): XML/HTML tags will be completed automatically.
-  
+
 * [snipMate](https://github.com/garbas/vim-snipmate): TextMate-style snippets for Vim
 
   `:help snipMate` to see more info.
 
 * [VisIncr](https://www.vim.org/scripts/script.php?script_id=670): Produce increasing/decreasing columns of numbers, dates, or daynames.
-  
+
 * [Cute Error Marker](https://www.vim.org/scripts/script.php?script_id=2653): showing error and warning icons on line.
-  
+
    MacVim users need to enable "Use experimental renderer" to see
    graphical icons.
 
@@ -97,18 +97,18 @@ PLUGINS
 
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion): An easy way to jump to a word.
 
-  Useful commands:   
-    `,,w` forward EasyMotion   
-    `,,b` backward EasyMotion   
+  Useful commands:
+    `,,w` forward EasyMotion
+    `,,b` backward EasyMotion
 
 * [TagBar](https://majutsushi.github.com/tagbar): browsing the tags of source files ordered by classes.
 
-  Useful commands:    
+  Useful commands:
     `F7` toggles the TagBar
 
-* [Indent Motion](https://github.com/vim-scripts/indent-motion): Vim motions to the start and end of the current indentation-delimited block 
+* [Indent Motion](https://github.com/vim-scripts/indent-motion): Vim motions to the start and end of the current indentation-delimited block
 
-  Useful commands:    
+  Useful commands:
     `,]` move to the end of the current indentation-delimited block (very useful in Python and CoffeeScript)
     `,[` move to the beginning of the current indentation-delimited block (very useful in Python and CoffeeScript)
 
