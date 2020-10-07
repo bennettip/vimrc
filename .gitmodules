@@ -31,9 +31,6 @@
 [submodule "pack/surround/start/surround"]
 	path = pack/surround/start/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "pack/syntastic/start/syntastic"]
-	path = pack/syntastic/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic
 [submodule "pack/tagbar/start/tagbar"]
 	path = pack/tagbar/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
@@ -97,3 +94,6 @@
 [submodule "pack/fzf.vim/start/fzf.vim"]
 	path = pack/fzf.vim/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "pack/ale/start/ale"]
+	path = pack/ale/start/ale
+	url = https://github.com/dense-analysis/ale.git
