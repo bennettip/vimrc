@@ -23,28 +23,26 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
+
+set background=dark
+set cursorline          " highlight current line
+colors moria_mod
+highlight CursorLine    guibg=#003853   ctermbg=24  gui=none    cterm=none
+
 if has("gui_running")   " GUI color and font settings
     set guifont=DejaVu\ Sans\ Mono\ 12
-    set background=dark
-    set t_Co=256        " 256 color mode
-    set cursorline      " highlight current line
-    colors moria
-    highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
+    "set t_Co=256        " 256 color mode
 else
     " terminal color settings
-    colors bip
+
+    set termguicolors   " uses highlight-guifg and highlight-guibg attributes
+    highlight CursorLineNr  cterm=bold
 
     " change cursor shape in different modes
-    if has("autocmd")
-        au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
-        au InsertEnter,InsertChange *
-            \ if v:insertmode == 'i' |
-            \   silent execute '!echo -ne "\e[5 q"' | redraw! |
-            \ elseif v:insertmode == 'r' |
-            \   silent execute '!echo -ne "\e[3 q"' | redraw! |
-            \ endif
-        au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-    endif
+    let &t_SI = "\<Esc>[5 q"
+    let &t_SR = "\<Esc>[3 q"
+    let &t_EI = "\<Esc>[1 q"
+
     set ttimeoutlen=1   " reduce waite time after Esc
 endif
 
@@ -128,9 +126,9 @@ map <leader>r :call Replace()<CR>
 " open the error console
 map <leader>cc :botright cope<CR>
 " move to next error
-map <leader>] :cn<CR>
+"map <leader>] :cn<CR>
 " move to the prev error
-map <leader>[ :cp<CR>
+"map <leader>[ :cp<CR>
 
 " --- move around splits {
 " move to and maximize the below split
@@ -291,18 +289,11 @@ au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 " --- vim-gitgutter
 let g:gitgutter_enabled = 1
 
+" --- ALE
+let g:ale_sign_column_always = 1
+
 " set ejs filetype to html
 au BufNewFile,BufRead *.ejs set filetype=html
-
-" --- syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 "---------------------------------------------------------------------------
 " CUSTOM SETTINGS
