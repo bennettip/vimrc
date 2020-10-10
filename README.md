@@ -3,15 +3,19 @@ vimrc
 ONE-STEP INSTALL
 ----------------
 
-Use curl (for macOS):
+Use curl:
 
      curl -o - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install.sh | sh
 
-or wget (for most UNIX platforms):
+or wget:
 
      wget -O - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install.sh | sh
 
-basic vimrc:
+Basic vimrc only:
+
+     curl -o - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install-basic.sh | sh
+
+or wget:
 
      wget -O - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install-basic.sh | sh
 
@@ -132,6 +136,8 @@ PLUGINS
 * [fugitive.vim](https://github.com/tpope/vim-fugitive): a Git wrapper plugin for Vim.
 
 * [fzf.vim](https://github.com/junegunn/fzf.vim): a fzf wrapper plugin for Vim.
+
+* [vim-python-pep8-indent](https://github.com/Vimjas/vim-python-pep8-indent): modifies Vim's indentation behavior to comply with PEP 8.
 
 Language specific supports
 --------------------------

@@ -97,3 +97,12 @@
 [submodule "pack/fzf_vim/start/fzf_vim"]
 	path = pack/fzf_vim/start/fzf_vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "pack/killersheep/opt/killersheep"]
+	path = pack/killersheep/opt/killersheep
+	url = https://github.com/vim/killersheep.git
+[submodule "pack/vim-python-pep8-indent/start/vim-python-pep8-indent"]
+	path = pack/vim-python-pep8-indent/start/vim-python-pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent.git
+[submodule "pack/ack_vim/start/ack_vim"]
+	path = pack/ack_vim/start/ack_vim
+	url = https://github.com/mileszs/ack.vim.git
