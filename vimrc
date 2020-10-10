@@ -35,10 +35,19 @@ if has("gui_running")   " GUI color and font settings
 else
     " terminal color settings
 
-    set termguicolors   " uses highlight-guifg and highlight-guibg attributes
+    " uses highlight-guifg and highlight-guibg attributes
+    if exists('+termguicolors')
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+        set termguicolors
+    endif
+
     highlight CursorLineNr  cterm=bold
 
     " change cursor shape in different modes
+    " redraw cursor (block) upon startup
+    autocmd VimEnter * silent execute '!echo -ne "\e[1 q"' | redraw!
+    " set cursor shapes for different modes
     let &t_SI = "\<Esc>[5 q"
     let &t_SR = "\<Esc>[3 q"
     let &t_EI = "\<Esc>[1 q"
@@ -73,9 +82,9 @@ set tm=500
     set softtabstop=4
     set shiftwidth=4
 
-    au FileType Makefile set noexpandtab
+    autocmd FileType Makefile set noexpandtab
 
-    autocmd FileType html,css,javascript setlocal softtabstop=2 shiftwidth=2
+    autocmd FileType html,css,javascript,r setlocal softtabstop=2 shiftwidth=2
 "}
 
 " status line {
@@ -125,10 +134,6 @@ map <leader>r :call Replace()<CR>
 
 " open the error console
 map <leader>cc :botright cope<CR>
-" move to next error
-"map <leader>] :cn<CR>
-" move to the prev error
-"map <leader>[ :cp<CR>
 
 " --- move around splits {
 " move to and maximize the below split
@@ -287,10 +292,33 @@ let g:snipMateAllowMatchingDot = 0
 au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
 " --- vim-gitgutter
-let g:gitgutter_enabled = 1
+set signcolumn=yes                  " always show the sign column
+
+" --- ack.vim
+" use ag
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+
+" --- fzf.vim
+source /usr/share/doc/fzf/examples/fzf.vim
 
 " --- ALE
-let g:ale_sign_column_always = 1
+let g:ale_sign_column_always = 1    " always show the sign column
+
+" see :ALEFixSuggest
+let g:ale_fixers = {
+"\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['yapf'],
+\   'r': ['styler'],
+\   'sh': ['shfmt'],
+\}
+
+" shortcuts
+" move to next error
+map <leader>n :ALENext<cr>
+" move to the prev error
+map <leader>p :ALEPrevious<cr>
 
 " set ejs filetype to html
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -304,10 +332,12 @@ set colorcolumn=80      " highlight column 80
 set lines=48 columns=86 " set initial window size
 
 " aliases for common typos
-command Wq wq
-command WQ wq
-command Q q
-command W w
+cnoreabbrev Wq wq
+cnoreabbrev WQ wq
+cnoreabbrev Q q
+cnoreabbrev W w
+cnoreabbrev E e
+cnoreabbrev Tabedit tabedit
 
 " enable mouse
 "if has('mouse')
