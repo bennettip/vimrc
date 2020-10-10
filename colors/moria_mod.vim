@@ -39,14 +39,14 @@ if &background == "dark"
         hi Normal ctermbg=0 ctermfg=7 guibg=#202020 guifg=#d0d0d0 gui=none
 
         hi ColorColumn ctermbg=8 ctermfg=15 guibg=#494949 gui=none
-        hi CursorColumn ctermbg=8 ctermfg=15 guibg=#404040 gui=none
-        hi CursorLine ctermbg=8 ctermfg=15 guibg=#404040 gui=none
+        hi CursorColumn ctermbg=24 cterm=none guibg=#003853 gui=none
+        hi CursorLine ctermbg=24 cterm=none guibg=#003853 gui=none
     elseif s:moria_style == "black"
         hi Normal ctermbg=0 ctermfg=7 guibg=#000000 guifg=#d0d0d0 gui=none
 
         hi ColorColumn ctermbg=8 ctermfg=15 guibg=#444444 gui=none
-        hi CursorColumn ctermbg=8 ctermfg=15 guibg=#3a3a3a gui=none
-        hi CursorLine ctermbg=8 ctermfg=15 guibg=#3a3a3a gui=none
+        hi CursorColumn ctermbg=24 cterm=none guibg=#00324d gui=none
+        hi CursorLine ctermbg=24 cterm=none guibg=#00324d gui=none
     endif
     if s:moria_monochrome == 1
         hi FoldColumn ctermbg=bg guibg=bg guifg=#a0a0a0 gui=none
@@ -70,7 +70,7 @@ if &background == "dark"
         endif            
     else
         hi FoldColumn ctermbg=bg guibg=bg guifg=#8fa5d1 gui=none
-        hi CursorLineNr guifg=#8fa5d1 gui=bold
+        hi CursorLineNr cterm=bold guifg=#8fa5d1 gui=bold
         hi LineNr guifg=#8fa5d1 gui=none
         hi MoreMsg guibg=bg guifg=#97abd5 gui=bold
         hi NonText ctermfg=8 guibg=bg guifg=#8fa5d1 gui=bold

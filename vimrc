@@ -24,16 +24,13 @@ syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
 
-set background=dark
-set cursorline          " highlight current line
-colors moria_mod
-highlight CursorLine    guibg=#003853   ctermbg=24  gui=none    cterm=none
-
 if has("gui_running")   " GUI color and font settings
     set guifont=DejaVu\ Sans\ Mono\ 12
     "set t_Co=256        " 256 color mode
 else
     " terminal color settings
+
+    let moria_style = "black"
 
     " uses highlight-guifg and highlight-guibg attributes
     if exists('+termguicolors')
@@ -41,8 +38,6 @@ else
         let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
         set termguicolors
     endif
-
-    highlight CursorLineNr  cterm=bold
 
     " change cursor shape in different modes
     " redraw cursor (block) upon startup
@@ -54,6 +49,9 @@ else
 
     set ttimeoutlen=1   " reduce waite time after Esc
 endif
+set background=dark
+set cursorline          " highlight current line
+colors moria_mod
 
 set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
@@ -299,6 +297,7 @@ set signcolumn=yes                  " always show the sign column
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
+cnoreabbrev Ack Ack!                " don't jump to the first result
 
 " --- fzf.vim
 source /usr/share/doc/fzf/examples/fzf.vim
@@ -338,11 +337,6 @@ cnoreabbrev Q q
 cnoreabbrev W w
 cnoreabbrev E e
 cnoreabbrev Tabedit tabedit
-
-" enable mouse
-"if has('mouse')
-    "set mouse=a
-"endif
 
 com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 nnoremap = :FormatXML<Cr>
