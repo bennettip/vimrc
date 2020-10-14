@@ -1,5 +1,5 @@
 #!/bin/sh
-VIMHOME=~/.vim
+VIMRC_HOME=~/.vim
 
 warn() {
     echo "$1" >&2
@@ -10,15 +10,18 @@ die() {
     exit 1
 }
 
-[ -e "$VIMHOME/vimrc" ] && die "$VIMHOME/vimrc already exists."
-[ -e "$HOME/.vim" ] && die "$HOME/.vim already exists."
-[ -e "$HOME/.vimrc" ] && die "$HOME/.vimrc already exists."
+for COMMAND in fzf vim git; do
+    ! [ -x "$(command -v $COMMAND)" ] && die "Please install $COMMAND."
+done
 
-git clone https://github.com/bennettip/vimrc.git "$VIMHOME"
-cd "$VIMHOME" || exit
+for TARGET in vimrc .vim .vimrc .gvimrc; do
+    [ -e "$VIMRC_HOME/$TARGET" ] && die "$VIMRC_HOME/$TARGET already exists."
+done
+
+git clone https://github.com/bennettip/vimrc.git "$VIMRC_HOME"
+cd "$VIMRC_HOME" || exit
 git submodule update --init
 
 ./install-vimrc.sh
 
 echo "vimrc is installed."
-

@@ -1,5 +1,6 @@
 #!/bin/sh
+VIMRC_HOME=$(pwd)
 cd ..
-ln -s .vim/vimrc .vimrc
-ln -s .vim/gvimrc .gvimrc
-
+for TARGET in vimrc gvimrc; do
+    ln -s "$VIMRC_HOME/$TARGET" ".$TARGET"
+done
