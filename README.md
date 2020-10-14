@@ -80,7 +80,7 @@ PLUGINS
 
 * [vim-surround](https://github.com/tpope/vim-surround): deal with pairs of surroundings.
 
-* [matchit](https://www.vim.org/scripts/script.php?script_id=39): extended % matching for HTML, LaTeX, and many other languages.
+* [matchit](https://github.com/benjifisher/matchit.zip): extended % matching for HTML, LaTeX, and many other languages.
 
 * [xmledit](https://github.com/sukima/xmledit): XML/HTML tags will be completed automatically.
 
@@ -88,16 +88,11 @@ PLUGINS
 
   `:help snipMate` to see more info.
 
-* [VisIncr](https://www.vim.org/scripts/script.php?script_id=670): produce increasing/decreasing columns of numbers, dates, or daynames.
-
-* [Cute Error Marker](https://www.vim.org/scripts/script.php?script_id=2653): showing error and warning icons on line.
-
-   MacVim users need to enable "Use experimental renderer" to see
-   graphical icons.
+* [VisIncr](https://github.com/vim-scripts/VisIncr): produce increasing/decreasing columns of numbers, dates, or daynames.
 
 * [vim-latex](https://github.com/vim-latex/vim-latex): LaTeX support.
 
-* [JavaComplete](https://www.vim.org/scripts/script.php?script_id=1785): Java Omni-completion.
+* [vim-javacomplete2](https://github.com/artur-shaik/vim-javacomplete2): Java Omni-completion.
 
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion): an easy way to jump to a word.
 
@@ -105,7 +100,7 @@ PLUGINS
     `<Leader><Leader>w` forward EasyMotion
     `<Leader><Leader>b` backward EasyMotion
 
-* [TagBar](https://majutsushi.github.com/tagbar): browsing the tags of source files ordered by classes.
+* [TagBar](https://github.com/preservim/tagbar): browsing the tags of source files ordered by classes.
 
   Useful commands:
     `F7` toggles the TagBar

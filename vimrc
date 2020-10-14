@@ -23,7 +23,6 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
-
 if has("gui_running")   " GUI color and font settings
     set guifont=DejaVu\ Sans\ Mono\ 12
     "set t_Co=256        " 256 color mode
@@ -127,6 +126,7 @@ endfun
 "---------------------------------------------------------------------------
 " USEFUL SHORTCUTS
 "---------------------------------------------------------------------------
+
 "replace the current word in all opened buffers
 map <leader>r :call Replace()<CR>
 
@@ -210,7 +210,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType java set omnifunc=javacomplete#Complete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " use syntax complete if nothing else available
 if has("autocmd") && exists("+omnifunc")
@@ -229,6 +229,7 @@ autocmd BufNewFile,BufRead *.sass             set ft=sass.css
 "---------------------------------------------------------------------------
 " ENCODING SETTINGS
 "---------------------------------------------------------------------------
+
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
@@ -251,7 +252,6 @@ fun! Big5()
     set fileencoding=big5
 endfun
 
-
 "---------------------------------------------------------------------------
 " PLUGIN SETTINGS
 "---------------------------------------------------------------------------
@@ -265,7 +265,6 @@ set shellslash
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 "}
-
 set grepprg=grep\ -nH\ $*
 let g:Tex_AutoFolding = 0
 let g:Tex_DefaultTargetFormat='pdf'
@@ -313,12 +312,15 @@ let g:ale_fixers = {
 \   'sh': ['shfmt'],
 \   'css': ['stylelint'],
 \}
-
 " shortcuts
 " move to next error
 map <leader>n :ALENext<cr>
 " move to the prev error
 map <leader>p :ALEPrevious<cr>
+
+" --- vim-startuptime
+let g:startuptime_exe_args = ['-X']
+
 
 " set ejs filetype to html
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -326,10 +328,11 @@ au BufNewFile,BufRead *.ejs set filetype=html
 "---------------------------------------------------------------------------
 " CUSTOM SETTINGS
 "---------------------------------------------------------------------------
+
 set number              " show line numbers
 set scrolloff=5         " number of lines above and below the cursor
 set colorcolumn=80      " highlight column 80
-set lines=48 columns=86 " set initial window size
+"set lines=48 columns=86 " set initial window size
 
 " aliases for common typos
 cnoreabbrev Wq wq
@@ -341,4 +344,3 @@ cnoreabbrev Tabedit tabedit
 
 com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 nnoremap = :FormatXML<Cr>
-

@@ -1,105 +1,105 @@
-[submodule "pack/CuteErrorMarker/start/CuteErrorMarker"]
-	path = pack/CuteErrorMarker/start/CuteErrorMarker
-	url = https://github.com/Twinside/vim-cuteErrorMarker.git
 [submodule "pack/easymotion/start/easymotion"]
-	path = pack/easymotion/start/easymotion
+	path = pack/start/start/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "pack/emmet-vim/start/emmet-vim"]
-	path = pack/emmet-vim/start/emmet-vim
+	path = pack/start/start/emmet-vim
 	url = https://github.com/mattn/emmet-vim
-[submodule "pack/javacomplete/start/javacomplete"]
-	path = pack/javacomplete/start/javacomplete
-	url = https://github.com/vim-scripts/javacomplete
 [submodule "pack/matchit/start/matchit"]
-	path = pack/matchit/start/matchit
+	path = pack/start/start/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
 [submodule "pack/nerdcommenter/start/nerdcommenter"]
-	path = pack/nerdcommenter/start/nerdcommenter
+	path = pack/start/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "pack/nerdtree/start/nerdtree"]
-	path = pack/nerdtree/start/nerdtree
+	path = pack/start/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "pack/node/start/node"]
-	path = pack/node/start/node
+	path = pack/start/start/node
 	url = https://github.com/moll/vim-node.git
 [submodule "pack/pythoncomplete/start/pythoncomplete"]
-	path = pack/pythoncomplete/start/pythoncomplete
+	path = pack/start/start/pythoncomplete
 	url = https://github.com/vim-scripts/pythoncomplete.git
 [submodule "pack/scala-vim-support/start/scala-vim-support"]
-	path = pack/scala-vim-support/start/scala-vim-support
+	path = pack/opt/opt/scala-vim-support
 	url = https://github.com/rosstimson/scala-vim-support.git
 [submodule "pack/surround/start/surround"]
-	path = pack/surround/start/surround
+	path = pack/start/start/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "pack/tagbar/start/tagbar"]
-	path = pack/tagbar/start/tagbar
-	url = https://github.com/majutsushi/tagbar.git
 [submodule "pack/tlib_vim/start/tlib_vim"]
-	path = pack/tlib_vim/start/tlib_vim
+	path = pack/start/start/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
 [submodule "pack/typescript-vim/start/typescript-vim"]
-	path = pack/typescript-vim/start/typescript-vim
+	path = pack/opt/opt/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "pack/vim-addon-mw-utils/start/vim-addon-mw-utils"]
-	path = pack/vim-addon-mw-utils/start/vim-addon-mw-utils
+	path = pack/start/start/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "pack/vim-coffee-script/start/vim-coffee-script"]
-	path = pack/vim-coffee-script/start/vim-coffee-script
+	path = pack/opt/opt/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "pack/vim-gitgutter/start/vim-gitgutter"]
-	path = pack/vim-gitgutter/start/vim-gitgutter
+	path = pack/start/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "pack/vim-javascript/start/vim-javascript"]
-	path = pack/vim-javascript/start/vim-javascript
+	path = pack/start/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
 [submodule "pack/vim-js-indent/start/vim-js-indent"]
-	path = pack/vim-js-indent/start/vim-js-indent
+	path = pack/start/start/vim-js-indent
 	url = https://github.com/jason0x43/vim-js-indent.git
 [submodule "pack/vim-latex/start/vim-latex"]
-	path = pack/vim-latex/start/vim-latex
+	path = pack/opt/opt/vim-latex
 	url = https://github.com/vim-latex/vim-latex.git
 [submodule "pack/vim-snipmate/start/vim-snipmate"]
-	path = pack/vim-snipmate/start/vim-snipmate
+	path = pack/start/start/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
 [submodule "pack/VisIncr/start/VisIncr"]
-	path = pack/VisIncr/start/VisIncr
+	path = pack/start/start/VisIncr
 	url = https://github.com/vim-scripts/VisIncr.git
 [submodule "pack/xmledit/start/xmledit"]
-	path = pack/xmledit/start/xmledit
+	path = pack/opt/opt/xmledit
 	url = https://github.com/sukima/xmledit.git
 [submodule "pack/vim-airline/start/vim-airline"]
-	path = pack/vim-airline/start/vim-airline
+	path = pack/start/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule "pack/vim-fugitive/start/vim-fugitive"]
-	path = pack/vim-fugitive/start/vim-fugitive
+	path = pack/start/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "pack/vim-snippets/start/vim-snippets"]
-	path = pack/vim-snippets/start/vim-snippets
+	path = pack/start/start/vim-snippets
 	url = https://github.com/bennettip/vim-snippets.git
 [submodule "pack/vim-visual-multi/start/vim-visual-multi"]
-	path = pack/vim-visual-multi/start/vim-visual-multi
+	path = pack/start/start/vim-visual-multi
 	url = https://github.com/mg979/vim-visual-multi.git
 [submodule "pack/jupyter-vim/start/jupyter-vim"]
-	path = pack/jupyter-vim/start/jupyter-vim
+	path = pack/opt/opt/jupyter-vim
 	url = https://github.com/jupyter-vim/jupyter-vim.git
 [submodule "pack/vim-jsx-pretty/start/vim-jsx-pretty"]
 	path = pack/vim-jsx-pretty/start/vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
 [submodule "pack/indent-motion/start/indent-motion"]
-	path = pack/indent-motion/start/indent-motion
+	path = pack/start/start/indent-motion
 	url = https://github.com/tmhedberg/indent-motion
 [submodule "pack/ale/start/ale"]
-	path = pack/ale/start/ale
+	path = pack/start/start/ale
 	url = https://github.com/dense-analysis/ale.git
 [submodule "pack/fzf_vim/start/fzf_vim"]
-	path = pack/fzf_vim/start/fzf_vim
+	path = pack/start/start/fzf_vim
 	url = https://github.com/junegunn/fzf.vim.git
 [submodule "pack/killersheep/opt/killersheep"]
-	path = pack/killersheep/opt/killersheep
+	path = pack/opt/opt/killersheep
 	url = https://github.com/vim/killersheep.git
 [submodule "pack/vim-python-pep8-indent/start/vim-python-pep8-indent"]
-	path = pack/vim-python-pep8-indent/start/vim-python-pep8-indent
+	path = pack/start/start/vim-python-pep8-indent
 	url = https://github.com/Vimjas/vim-python-pep8-indent.git
 [submodule "pack/ack_vim/start/ack_vim"]
-	path = pack/ack_vim/start/ack_vim
+	path = pack/start/start/ack_vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "pack/opt/opt/vim-javacomplete2"]
+	path = pack/opt/opt/vim-javacomplete2
+	url = https://github.com/artur-shaik/vim-javacomplete2.git
+[submodule "pack/opt/opt/tagbar"]
+	path = pack/opt/opt/tagbar
+	url = https://github.com/preservim/tagbar
+[submodule "pack/opt/opt/vim-startuptime"]
+	path = pack/opt/opt/vim-startuptime
+	url = https://github.com/dstein64/vim-startuptime.git
