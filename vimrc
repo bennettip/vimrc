@@ -47,7 +47,7 @@ else
     let &t_SR = "\<Esc>[3 q"
     let &t_EI = "\<Esc>[1 q"
 
-    set ttimeoutlen=1   " reduce waite time after Esc
+    set ttimeoutlen=1   " reduce wait time after Esc
 endif
 set background=dark
 set cursorline          " highlight current line
@@ -311,6 +311,7 @@ let g:ale_fixers = {
 \   'python': ['yapf'],
 \   'r': ['styler'],
 \   'sh': ['shfmt'],
+\   'css': ['stylelint'],
 \}
 
 " shortcuts
