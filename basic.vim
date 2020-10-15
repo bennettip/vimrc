@@ -1,4 +1,6 @@
-" General Settings
+"---------------------------------------------------------------------------
+" GENERAL SETTINGS
+"---------------------------------------------------------------------------
 
 set nocompatible	" not compatible with the old-fashion vi mode
 set bs=2		" allow backspacing over everything in insert mode
@@ -21,17 +23,34 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
-if has("gui_running")	" GUI color and font settings
-    set guifontwide=DejaVu\ Sans\ Mono
-    set background=dark
-    set t_Co=256          " 256 color mode
-    set cursorline        " highlight current line
-    colors moria
-    highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
+if has("gui_running")   " GUI color and font settings
+    set guifont=DejaVu\ Sans\ Mono\ 12
+    "set t_Co=256        " 256 color mode
 else
-" terminal color settings
-    colors ben
+    " terminal color settings
+
+    let moria_style = "black"
+
+    " uses highlight-guifg and highlight-guibg attributes
+    if exists('+termguicolors')
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+        set termguicolors
+    endif
+
+    " change cursor shape in different modes
+    " redraw cursor (block) upon startup
+    autocmd VimEnter * silent execute '!echo -ne "\e[1 q"' | redraw!
+    " set cursor shapes for different modes
+    let &t_SI = "\<Esc>[5 q"
+    let &t_SR = "\<Esc>[3 q"
+    let &t_EI = "\<Esc>[1 q"
+
+    set ttimeoutlen=1   " reduce wait time after Esc
 endif
+set background=dark
+set cursorline          " highlight current line
+colors moria_mod
 
 set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
@@ -56,11 +75,13 @@ set t_vb=
 set tm=500
 
 " TAB setting{
-   set expandtab        "replace <TAB> with spaces
-   set softtabstop=4
-   set shiftwidth=4
+    set expandtab        "replace <TAB> with spaces
+    set softtabstop=4
+    set shiftwidth=4
 
-   au FileType Makefile set noexpandtab
+    autocmd FileType Makefile set noexpandtab
+
+    autocmd FileType html,css,javascript,r setlocal softtabstop=2 shiftwidth=2
 "}
 
 " status line {
@@ -94,9 +115,7 @@ set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <=
     \ line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-"---------------------------------------------------------------------------
 " Tip #382: Search for <cword> and replace with input() in all open buffers
-"---------------------------------------------------------------------------
 fun! Replace()
     let s:word = input("Replace " . expand('<cword>') . " with:")
     :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/ge'
@@ -112,10 +131,6 @@ map <leader>r :call Replace()<CR>
 
 " open the error console
 map <leader>cc :botright cope<CR>
-" move to next error
-map <leader>] :cn<CR>
-" move to the prev error
-map <leader>[ :cp<CR>
 
 " --- move around splits {
 " move to and maximize the below split
@@ -194,7 +209,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType java set omnifunc=javacomplete#Complete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " use syntax complete if nothing else available
 if has("autocmd") && exists("+omnifunc")
@@ -238,16 +253,18 @@ endfun
 "---------------------------------------------------------------------------
 " CUSTOM SETTINGS
 "---------------------------------------------------------------------------
-set number
-set scrolloff=5
-set colorcolumn=80
+set number              " show line numbers
+set scrolloff=5         " number of lines above and below the cursor
+set colorcolumn=80      " highlight column 80
+"set lines=48 columns=86 " set initial window size
 
-if has('mouse')
-    set mouse=a
-endif
+" aliases for common typos
+cnoreabbrev Wq wq
+cnoreabbrev WQ wq
+cnoreabbrev Q q
+cnoreabbrev W w
+cnoreabbrev E e
+cnoreabbrev Tabedit tabedit
 
-command Wq wq
-command WQ wq
-command Q q
-command W w
-
+com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+nnoremap = :FormatXML<Cr>
