@@ -103,3 +103,6 @@
 [submodule "pack/opt/opt/vim-startuptime"]
 	path = pack/opt/opt/vim-startuptime
 	url = https://github.com/dstein64/vim-startuptime.git
+[submodule "pack/opt/opt/vim-jsx-pretty"]
+	path = pack/opt/opt/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
