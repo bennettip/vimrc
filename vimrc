@@ -52,11 +52,14 @@ set background=dark
 set cursorline          " highlight current line
 colors moria_mod
 
-" share clipboard between multiple Vim instances (not to external environment)
+" (X11) "+y to copy to system clipboard (+)
+xnoremap "+y y:call system("xclip -se c -i", @")<cr>
+
+" (Wayland) share clipboard between Vim instances (not to external environment)
 " https://www.reddit.com/r/Fedora/comments/ax9p9t/vim_and_system_clipboard_under_wayland
-xnoremap "+y y:call system("wl-copy", @")<cr>
-nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
-nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p
+"xnoremap "+y y:call system("wl-copy", @")<cr>
+"nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+"nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p
 
 set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
@@ -148,8 +151,8 @@ map <C-K> <C-W>k<C-W>_
 nmap <c-h> <c-w>h<c-w><bar>
 " move to and maximize the right split
 nmap <c-l> <c-w>l<c-w><bar>
-set wmw=0       " set the min width of a window to 0 so we can maximize others
-set wmh=0       " set the min height of a window to 0 so we can maximize others
+set wmw=1       " set the min width of a window to 0 so we can maximize others
+set wmh=1       " set the min height of a window to 0 so we can maximize others
 " }
 
 " new tab
