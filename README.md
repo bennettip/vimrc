@@ -5,48 +5,62 @@ ONE-STEP INSTALL
 
 Use curl:
 
-     curl -o - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install.sh | sh
+```sh
+curl -o - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install.sh | sh
+```
 
 or wget:
 
-     wget -O - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install.sh | sh
+```sh
+wget -O - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install.sh | sh
+```
 
 Basic vimrc only:
 
-     curl -o - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install-basic.sh | sh
+```sh
+curl -o - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install-basic.sh | sh
+```
 
 or wget:
 
-     wget -O - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install-basic.sh | sh
+```sh
+wget -O - https://raw.githubusercontent.com/bennettip/vimrc/master/auto-install-basic.sh | sh
+```
 
 MANUALLY INSTALL
 ----------------
 
 1. Check out from github
 
-        git clone git://github.com/bennettip/vimrc.git ~/.vim
-        cd ~/.vim
-        git submodule update --init
+```sh
+git clone git://github.com/bennettip/vimrc.git ~/.vim
+cd ~/.vim
+git submodule update --init
+```
 
 2. Install ~/.vimrc and ~/.gvimrc
 
-        ./install-vimrc.sh
+```sh
+./install-vimrc.sh
+```
 
 MANUALLY INSTALL ON WINDOWS
 ---------------------------
 
 1. Check out from github
 
-        cd C:\Program Files\Vim   (or your installed path to Vim)
-        rmdir /s vimfiles         (This deletes your old vim configurations. If you want to keep it, use move instead of rmdir.)
-        git clone git://github.com/bennettip/vimrc.git vimfiles
-        git submodule update --init
+```PowerShell
+cd C:\Program Files\Vim # or your installed path to Vim
+rmdir /s vimfiles       # This deletes your old vim configurations. If you want to keep it, use move instead of rmdir.
+git clone git://github.com/bennettip/vimrc.git vimfiles
+git submodule update --init
+```
 
 2. Install vimrc. Add the following line at the end of C:\Program Files\Vim\vimrc.
 
-        source $VIM/vimfiles/vimrc
-
-
+```vim
+source $VIM/vimfiles/vimrc
+```
 
 INSTALL & UPGRADE PLUGIN BUNDLES
 --------------------------------
@@ -54,13 +68,17 @@ INSTALL & UPGRADE PLUGIN BUNDLES
 All plugins were checked out as git submodules,
 which can be upgraded with `git pull`. For example, to upgrade NERDTree
 
-     cd ~/.vim/bundle/nerdtree
-     git pull
+```sh
+cd ~/.vim/bundle/nerdtree
+git pull
+```
 
 To install a new plugin as a git submoudle, type the following commands.
 
-     cd ~/.vim
-     git submodule add [GIT-REPOSITORY-URL] pack/[PLUGIN-NAME]/start/[PLUGIN-NAME]
+```sh
+cd ~/.vim
+git submodule add [GIT-REPOSITORY-URL] pack/[PLUGIN-NAME]/start/[PLUGIN-NAME]
+```
 
 HOW TO USE
 ----------

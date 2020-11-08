@@ -76,15 +76,9 @@
 [submodule "pack/vim-jsx-pretty/start/vim-jsx-pretty"]
 	path = pack/vim-jsx-pretty/start/vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
-[submodule "pack/indent-motion/start/indent-motion"]
-	path = pack/start/start/indent-motion
-	url = https://github.com/tmhedberg/indent-motion
 [submodule "pack/ale/start/ale"]
 	path = pack/start/start/ale
 	url = https://github.com/dense-analysis/ale.git
-[submodule "pack/fzf_vim/start/fzf_vim"]
-	path = pack/start/start/fzf_vim
-	url = https://github.com/junegunn/fzf.vim.git
 [submodule "pack/killersheep/opt/killersheep"]
 	path = pack/opt/opt/killersheep
 	url = https://github.com/vim/killersheep.git
@@ -106,3 +100,9 @@
 [submodule "pack/opt/opt/vim-jsx-pretty"]
 	path = pack/opt/opt/vim-jsx-pretty
 	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
+[submodule "pack/start/start/indent-motion"]
+	path = pack/start/start/indent-motion
+	url = https://github.com/tmhedberg/indent-motion.git
+[submodule "pack/start/start/fzf_vim"]
+	path = pack/start/start/fzf_vim
+	url = https://github.com/junegunn/fzf.vim.git
