@@ -32,7 +32,7 @@ if exists("syntax_on")
     syntax reset
 endif
 
-let colors_name = "moria"
+let colors_name = "moriamod"
 
 if &background == "dark"
     if s:moria_style == "dark"
@@ -103,8 +103,8 @@ if &background == "dark"
     hi Search guibg=#90e090 guifg=#000000 gui=none
     hi SpecialKey guibg=bg guifg=#e8b87e gui=none
     if has("spell")
-        hi SpellBad guisp=#ee2c2c gui=undercurl
-        hi SpellCap guisp=#2c2cee gui=undercurl
+        hi SpellBad ctermbg=1 guisp=#ee2c2c gui=undercurl
+        hi SpellCap ctermbg=4 guisp=#2c2cee gui=undercurl
         hi SpellLocal guisp=#2ceeee gui=undercurl
         hi SpellRare guisp=#ee2cee gui=undercurl
     endif
@@ -121,14 +121,14 @@ if &background == "dark"
 
     hi Comment guibg=bg guifg=#d0d0a0 gui=none
     hi Constant guibg=bg guifg=#87df71 gui=none
-    hi Error guibg=bg guifg=#ee2c2c gui=none
+    hi Error ctermbg=1 guibg=bg guifg=#ee2c2c gui=none
     hi Identifier guibg=bg guifg=#7ee0ce gui=none
     hi Ignore guibg=bg guifg=bg gui=none
     hi lCursor guibg=#00e700 guifg=#000000 gui=none
     hi MatchParen guibg=#008b8b gui=none
     hi PreProc guibg=bg guifg=#d7a0d7 gui=none
     hi Special guibg=bg guifg=#e8b87e gui=none
-    hi Todo guibg=#e0e000 guifg=#000000 gui=none
+    hi Todo ctermbg=3 guibg=#999900 guifg=#000000 gui=none
     hi Underlined ctermbg=0 ctermfg=15 guibg=bg guifg=#00a0ff gui=underline    
 
     if s:moria_fontface == "mixed"

@@ -50,7 +50,7 @@ else
 endif
 set background=dark
 set cursorline          " highlight current line
-colors moria_mod
+colors moriamod
 
 " (X11) "+y to copy to system clipboard (+)
 xnoremap "+y y:call system("xclip -se c -i", @")<cr>
@@ -292,6 +292,7 @@ let g:tagbar_autofocus = 1
 
 " --- SnipMate
 let g:snipMateAllowMatchingDot = 0
+let g:snipMate = { "snippet_version": 1 }
 
 " --- coffee-script
 " recompile coffee scripts on write
@@ -311,6 +312,7 @@ cnoreabbrev Ack Ack!                " don't jump to the first result
 source /usr/share/doc/fzf/examples/fzf.vim
 
 " --- ALE
+let g:ale_enabled = 0               " disable ALE by default
 let g:ale_sign_column_always = 1    " always show the sign column
 
 " see :ALEFixSuggest
@@ -341,11 +343,13 @@ au BufNewFile,BufRead *.ejs set filetype=html
 set number              " show line numbers
 set scrolloff=5         " number of lines above and below the cursor
 set colorcolumn=80      " highlight column 80
-"set lines=48 columns=86 " set initial window size
 
 " aliases for common typos
 cnoreabbrev Wq wq
 cnoreabbrev WQ wq
+cnoreabbrev qw wq
+cnoreabbrev Qw wq
+cnoreabbrev QW wq
 cnoreabbrev Q q
 cnoreabbrev W w
 cnoreabbrev E e
@@ -353,3 +357,4 @@ cnoreabbrev Tabedit tabedit
 
 com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 nnoremap = :FormatXML<Cr>
+
