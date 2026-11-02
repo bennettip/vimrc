@@ -358,3 +358,7 @@ cnoreabbrev Tabedit tabedit
 com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 nnoremap = :FormatXML<Cr>
 
+" https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
+" Force saving files that require root permission 
+cnoremap w!! w !sudo tee > /dev/null %
+
